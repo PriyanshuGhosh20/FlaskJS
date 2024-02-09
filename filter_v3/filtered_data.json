@@ -1,0 +1,220 @@
+{
+  "KPI Overview": {
+    "Total NET_SALES_AMOUNT": "107507018.64",
+    "Total NET_SALES_AMOUNT Change": "-2.30%",
+    "Average QUANTITY": "10.05",
+    "Average QUANTITY Change": "2.44%"
+  },
+  "Waterfall Data": {
+    "Total NET_SALES_AMOUNT": {
+      "SUB_DEPARTMENT_DESCRIPTION": {
+        "Total NET_SALES_AMOUNT in 2021": 54377665.95,
+        "CO Fashion Diamonds": 647701.8899999997,
+        "CO Fashion Jewelry": 2682345.9,
+        "CO Mfg Sample Sale": 77270.72999999998,
+        "CO Single Stone Jewelry": -351850.8600000001,
+        "Color": -1994149.4399999995,
+        "Gold Jewelry": -2309631.4800000004,
+        "Total NET_SALES_AMOUNT in 2022": -53129352.69
+      },
+      "CLASS_DESCRIPTION": {
+        "Total NET_SALES_AMOUNT in 2021": 54377665.95,
+        "CO Fashion Diamonds": 647701.8899999997,
+        "CO MSS Fashion Diamonds": 33619.54999999993,
+        "CO MSS Fashion Jewelry": 43651.17999999999,
+        "CO Metals": 2682345.9,
+        "CO Single Stone Jewelry": -351850.8600000001,
+        "Mens Gold": -1013526.0800000001,
+        "Moissanite": -1994149.4399999995,
+        "Womens Gold": -1296105.3999999985,
+        "Total NET_SALES_AMOUNT in 2022": -53129352.69
+      },
+      "SUB_CLASS_DESCRIPTION": {
+        "Total NET_SALES_AMOUNT in 2021": 54377665.95,
+        "CO Gold Jewelry": 2682345.9,
+        "CO Solitaire Earrings": -322598.1699999999,
+        "CO Solitaire Pendants": -29252.690000000002,
+        "xxx": -3578808.299999997,
+        "Total NET_SALES_AMOUNT in 2022": -53129352.690000005
+      },
+      "lab_indicator": {
+        "Total NET_SALES_AMOUNT in 2021": 54377665.95,
+        "xxx": -1248313.2600000054,
+        "Total NET_SALES_AMOUNT in 2022": -53129352.69
+      },
+      "category": {
+        "Total NET_SALES_AMOUNT in 2021": 54377665.95,
+        "Bracelet": 624383.1299999999,
+        "Earring": 299439.96999999974,
+        "Necklace/Pendant": 58568.0700000003,
+        "Ring": -2230704.4299999997,
+        "Total NET_SALES_AMOUNT in 2022": -53129352.69
+      },
+      "STORE_CONCEPT_UPDT": {
+        "Total NET_SALES_AMOUNT in 2021": 54377665.95,
+        "Internet": 455837.9200000004,
+        "Outlet": -319436.22000000067,
+        "Store": -1384714.960000001,
+        "Total NET_SALES_AMOUNT in 2022": -53129352.69
+      },
+      "price_Bucket_new": {
+        "Total NET_SALES_AMOUNT in 2021": 54377665.95,
+        "High": -2582496.920000002,
+        "Low": 1178516.6799999997,
+        "Medium": 155666.97999999858,
+        "Total NET_SALES_AMOUNT in 2022": -53129352.69
+      }
+    },
+    "Total QUANTITY": {
+      "SUB_DEPARTMENT_DESCRIPTION": {
+        "Total QUANTITY in 2021": 98052.0,
+        "CO Fashion Diamonds": 4381.0,
+        "CO Fashion Jewelry": 5987.0,
+        "CO Mfg Sample Sale": -170.0,
+        "CO Single Stone Jewelry": 96.0,
+        "Color": -1075.0,
+        "Gold Jewelry": -6824.0,
+        "Total QUANTITY in 2022": -100447.0
+      },
+      "CLASS_DESCRIPTION": {
+        "Total QUANTITY in 2021": 98052.0,
+        "CO Fashion Diamonds": 4381.0,
+        "CO MSS Fashion Diamonds": -274.0,
+        "CO MSS Fashion Jewelry": 104.0,
+        "CO Metals": 5987.0,
+        "CO Single Stone Jewelry": 96.0,
+        "Mens Gold": -793.0,
+        "Moissanite": -1075.0,
+        "Womens Gold": -6031.0,
+        "Total QUANTITY in 2022": -100447.0
+      },
+      "SUB_CLASS_DESCRIPTION": {
+        "Total QUANTITY in 2021": 98052.0,
+        "CO Gold Jewelry": 5987.0,
+        "CO Solitaire Earrings": 1.0,
+        "CO Solitaire Pendants": 95.0,
+        "xxx": -3688.0,
+        "Total QUANTITY in 2022": -100447.0
+      },
+      "lab_indicator": {
+        "Total QUANTITY in 2021": 98052.0,
+        "xxx": 2395.0,
+        "Total QUANTITY in 2022": -100447.0
+      },
+      "category": {
+        "Total QUANTITY in 2021": 98052.0,
+        "Bracelet": 1877.0,
+        "Earring": 3954.0,
+        "Necklace/Pendant": -2270.0,
+        "Ring": -1166.0,
+        "Total QUANTITY in 2022": -100447.0
+      },
+      "STORE_CONCEPT_UPDT": {
+        "Total QUANTITY in 2021": 98052.0,
+        "Internet": 1455.0,
+        "Outlet": -1121.0,
+        "Store": 2061.0,
+        "Total QUANTITY in 2022": -100447.0
+      },
+      "price_Bucket_new": {
+        "Total QUANTITY in 2021": 98052.0,
+        "High": -2581.0,
+        "Low": 6843.0,
+        "Medium": -1867.0,
+        "Total QUANTITY in 2022": -100447.0
+      }
+    }
+  },
+  "Pie Chart Data": {
+    "Total NET_SALES_AMOUNT": {
+      "SUB_DEPARTMENT_DESCRIPTION": {
+        "CO Fashion Diamonds": 17738548.02,
+        "CO Fashion Jewelry": 5930741.92,
+        "CO Mfg Sample Sale": 2968924.97,
+        "CO Single Stone Jewelry": 1946808.71,
+        "Color": 27204980.06,
+        "Gold Jewelry": 65702255.8
+      },
+      "CLASS_DESCRIPTION": {
+        "CO Fashion Diamonds": 17738548.02,
+        "CO MSS Fashion Diamonds": 1870681.54,
+        "CO MSS Fashion Jewelry": 1098243.43,
+        "CO Metals": 5930741.92,
+        "CO Single Stone Jewelry": 1946808.71,
+        "Mens Gold": 22452566.26,
+        "Moissanite": 27204980.06,
+        "Womens Gold": 43249689.54
+      },
+      "SUB_CLASS_DESCRIPTION": {
+        "CO Gold Jewelry": 5930741.92,
+        "CO Solitaire Earrings": 1733361.47,
+        "CO Solitaire Pendants": 213447.24,
+        "xxx": 113614708.85
+      },
+      "lab_indicator": {
+        "xxx": 121492259.48
+      },
+      "category": {
+        "Bracelet": 9918329.12,
+        "Earring": 17842393.73,
+        "Necklace/Pendant": 60750564.73,
+        "Ring": 32980971.9
+      },
+      "STORE_CONCEPT_UPDT": {
+        "Internet": 10038449.17,
+        "Outlet": 16121712.77,
+        "Store": 95332097.54
+      },
+      "price_Bucket_new": {
+        "High": 85505010.28,
+        "Low": 11501909.21,
+        "Medium": 24485339.99
+      }
+    },
+    "Total QUANTITY": {
+      "SUB_DEPARTMENT_DESCRIPTION": {
+        "CO Fashion Diamonds": 41424.0,
+        "CO Fashion Jewelry": 12571.0,
+        "CO Mfg Sample Sale": 5387.0,
+        "CO Single Stone Jewelry": 4528.0,
+        "Color": 19674.0,
+        "Gold Jewelry": 141781.0
+      },
+      "CLASS_DESCRIPTION": {
+        "CO Fashion Diamonds": 41424.0,
+        "CO MSS Fashion Diamonds": 2960.0,
+        "CO MSS Fashion Jewelry": 2427.0,
+        "CO Metals": 12571.0,
+        "CO Single Stone Jewelry": 4528.0,
+        "Mens Gold": 12063.0,
+        "Moissanite": 19674.0,
+        "Womens Gold": 129718.0
+      },
+      "SUB_CLASS_DESCRIPTION": {
+        "CO Gold Jewelry": 12571.0,
+        "CO Solitaire Earrings": 3910.0,
+        "CO Solitaire Pendants": 618.0,
+        "xxx": 208266.0
+      },
+      "lab_indicator": {
+        "xxx": 225365.0
+      },
+      "category": {
+        "Bracelet": 17978.0,
+        "Earring": 71535.0,
+        "Necklace/Pendant": 107607.0,
+        "Ring": 28245.0
+      },
+      "STORE_CONCEPT_UPDT": {
+        "Internet": 23741.0,
+        "Outlet": 28288.0,
+        "Store": 173336.0
+      },
+      "price_Bucket_new": {
+        "High": 74000.0,
+        "Low": 76244.0,
+        "Medium": 75121.0
+      }
+    }
+  }
+}
