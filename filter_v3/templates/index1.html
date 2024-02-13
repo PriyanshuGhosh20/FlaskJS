@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing & Promotion</title>
     <style>
+        
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
@@ -27,29 +28,34 @@ h1 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.filter-section {
+.filter-section, .kpi-section {
     margin-bottom: 20px;
 }
 
-.filter-label {
+.filter-label, .kpi-label {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
     font-weight: bold;
-    margin-right: 10px;
+    border-radius: 8px 8px 0 0;
 }
 
-.filter-checkbox {
-    margin-right: 10px;
-    color: #007BFF;
-}
-
-.kpi-section {
+.filter-checkbox, .kpi-checkbox {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
 }
 
-.kpi-checkbox {
+.filter-checkbox:hover, .kpi-checkbox:hover {
+    background-color: #f2f2f2;
+}
+
+.filter-checkbox input[type="checkbox"], .kpi-checkbox input[type="checkbox"] {
     margin-right: 10px;
-    color: #007BFF;
+    cursor: pointer;
 }
 
 .calculation-dropdown {
@@ -58,10 +64,11 @@ h1 {
     border-radius: 3px;
     color: #333;
     background-color: #f8f9fa;
+    margin-left: 10px;
+    width: 110px;
 }
 
-#start-year,
-#end-year {
+#start-year, #end-year {
     width: 70px;
     padding: 8px;
     margin-right: 10px;
@@ -77,6 +84,9 @@ h1 {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 #apply-filters-btn:hover {
@@ -92,10 +102,10 @@ h1 {
     border: 1px solid #ccc;
 }
 
-    </style>
+</style>
 </head>
 <body>
-    <div class="container">
+<div class="container">
     <h1>KPI Overview</h1>
     <div id="results">
         <div class="filter-section" id="filters-section">
@@ -128,7 +138,7 @@ h1 {
             <label class="filter-checkbox"><input type="checkbox" name="CLASS_DESCRIPTION" value="CO MSS Fashion Diamonds"> CO MSS Fashion Diamonds </label>
             <label class="filter-checkbox"><input type="checkbox" name="CLASS_DESCRIPTION" value="CO Single Stone Jewelry"> CO Single Stone Jewelry </label>
             <label class="filter-checkbox"><input type="checkbox" name="CLASS_DESCRIPTION" value="CO MSS Fashion Jewelry"> CO MSS Fashion Jewelry </label>
-            <label class="filter-checkbox"><input type="checkbox" name="CLASS_DESCRIPTION" value="Necklaces"> Necklaces </label><br>
+            <label class="filter-checkbox"><input type="checkbox" name="CLASS_DESCRIPTION" value="Necklaces"> Necklaces </label>
             <label class="filter-checkbox"><input type="checkbox" name="CLASS_DESCRIPTION" value="Earrings"> Earrings </label>
             <label class="filter-checkbox"><input type="checkbox" name="CLASS_DESCRIPTION" value="Mens Gold"> Mens Gold </label>
         </div>
@@ -171,29 +181,36 @@ h1 {
         </div>
 
         <div class="filter-section">
-            <label class="filter-label">Select KPIs:</label>
+            <div class="filter-label">Select KPIs:</div>
             <div class="kpi-section">
-                <label class="kpi-checkbox"><input type="checkbox" name="selected_kpi" value="NET_SALES_AMOUNT"> NET_SALES_AMOUNT</label>
-                <select class="calculation-dropdown" disabled>
-                    <option value="Total">Total</option>
-                    <option value="Average">Average</option>
-                </select>
+                <label class="kpi-checkbox">
+                    <input type="checkbox" name="selected_kpi" value="NET_SALES_AMOUNT"> NET_SALES_AMOUNT
+                    <select class="calculation-dropdown" disabled>
+                        <option value="" selected disabled>Select Type</option>
+                        <option value="Total">Total</option>
+                        <option value="Average">Average</option>
+                    </select>
+                </label>
+
+                <label class="kpi-checkbox">
+                    <input type="checkbox" name="selected_kpi" value="QUANTITY"> QUANTITY
+                    <select class="calculation-dropdown" disabled>
+                        <option value="" selected disabled>Select Type</option>
+                        <option value="Total">Total</option>
+                        <option value="Average">Average</option>
+                    </select>
+                </label>
+
+                <label class="kpi-checkbox">
+                    <input type="checkbox" name="selected_kpi" value="UNIT_COST_AMOUNT"> UNIT_COST_AMOUNT
+                    <select class="calculation-dropdown" disabled>
+                        <option value="" selected disabled>Select Type</option>
+                        <option value="Total">Total</option>
+                        <option value="Average">Average</option>
+                    </select>
+                </label>
             </div>
-            <div class="kpi-section">
-                <label class="kpi-checkbox"><input type="checkbox" name="selected_kpi" value="QUANTITY"> QUANTITY</label>
-                <select class="calculation-dropdown" disabled>
-                    <option value="Total">Total</option>
-                    <option value="Average">Average</option>
-                </select>
-            </div>
-            <div class="kpi-section">
-                <label class="kpi-checkbox"><input type="checkbox" name="selected_kpi" value="UNIT_COST_AMOUNT"> UNIT_COST_AMOUNT</label>
-                <select class="calculation-dropdown" disabled>
-                    <option value="Total">Total</option>
-                    <option value="Average">Average</option>
-                </select>
-            </div>
-        </div>          
+        </div>
 
         <label class="filter-label">Select Start Year:</label>
         <input type="number" id="start-year" min="2000" max="2100" step="1" value="2021">
@@ -205,10 +222,10 @@ h1 {
 
         <div id="json-data"></div>
     </div>
-    </div>
+</div>
 
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
     $(document).ready(function() {
     // Show/hide dropdowns based on checkbox selection
     $('input[name="selected_kpi"]').on('change', function() {
@@ -270,7 +287,6 @@ h1 {
         });
     });
 });
-
 </script>
 </body>
 </html>
