@@ -223,70 +223,73 @@ h1 {
         <div id="json-data"></div>
     </div>
 </div>
-
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
 <script>
-    $(document).ready(function() {
-    // Show/hide dropdowns based on checkbox selection
-    $('input[name="selected_kpi"]').on('change', function() {
-        var checkbox = $(this);
-        var dropdown = checkbox.closest('.kpi-section').find('.calculation-dropdown');
-        if (checkbox.prop('checked')) {
-            dropdown.prop('disabled', false);
-        } else {
-            dropdown.prop('disabled', true).val(null);
-        }
-    });
-
-    // Handle apply filters button click
-    $('#apply-filters-btn').on('click', function() {
-        var selected_filters = {};
-        $('.filter-section').each(function() {
-            var filterName = $(this).find('.filter-checkbox input').attr('name');
-            var selectedValues = $(this).find('.filter-checkbox input:checked').map(function() {
-                return $(this).val();
-            }).get();
-            selected_filters[filterName] = selectedValues;
-        });
-
-        var selected_kpi = $('input[name="selected_kpi"]:checked').map(function() {
-            return $(this).val();
-        }).get();
-
-        var start_year = $('#start-year').val();
-        var end_year = $('#end-year').val();
-        var selected_date = {
-            'date_column': 'week_starting_sunday',
-            'start': parseInt(start_year),
-            'end': parseInt(end_year)
-        };
-
-        var selected_types = $('.calculation-dropdown:enabled').map(function() {
-            return $(this).val();
-        }).get();
-
-        // Send selected filters to the backend
-        $.ajax({
-            type: 'POST',
-            contentType: 'application/json;charset=UTF-8',
-            url: '/filter-data',
-            data: JSON.stringify({
-                'filters': selected_filters,
-                'kpi': selected_kpi,
-                'date': selected_date,
-                'type': selected_types
-            }),
-            success: function(data) {
-                // Display JSON data
-                var jsonDataHtml = '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
-                $('#json-data').html(jsonDataHtml);
-            },
-            error: function(error) {
-                console.log('Error getting JSON data:', error);
+    $(document).ready(function () {
+        // Show/hide dropdowns based on checkbox selection
+        $('input[name="selected_kpi"]').on('change', function () {
+            var checkbox = $(this);
+            var dropdown = checkbox.closest('.kpi-checkbox').find('.calculation-dropdown');
+            if (checkbox.prop('checked')) {
+                dropdown.prop('disabled', false);
+            } else {
+                dropdown.prop('disabled', true).val(null);
             }
         });
+
+        // Handle apply filters button click
+        $('#apply-filters-btn').on('click', function () {
+            var selected_filters = {};
+            $('.filter-section').each(function () {
+                var filterName = $(this).find('.filter-checkbox input').attr('name');
+                var selectedValues = $(this).find('.filter-checkbox input:checked').map(function () {
+                    return $(this).val();
+                }).get();
+                selected_filters[filterName] = selectedValues;
+
+            });
+
+            var selected_kpi = $('input[name="selected_kpi"]:checked').map(function () {
+                return $(this).val();
+            }).get();
+
+            var start_year = $('#start-year').val();
+            var end_year = $('#end-year').val();
+            var selected_date = {
+                'date_column': 'week_starting_sunday',
+                'start': parseInt(start_year),
+                'end': parseInt(end_year)
+            };
+
+            var selected_types = $('.calculation-dropdown:enabled').map(function () {
+                return $(this).val();
+            }).get();
+
+            // Send selected filters to the backend
+            $.ajax({
+                type: 'POST',
+                contentType: 'application/json;charset=UTF-8',
+                url: '/filter-data',
+                data: JSON.stringify({
+                    'filters': selected_filters,
+                    'kpi': selected_kpi,
+                    'date': selected_date,
+                    'type': selected_types
+                }),
+                success: function (data) {
+                    // Display JSON data
+                    var jsonDataHtml = '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
+                    $('#json-data').html(jsonDataHtml);
+                },
+                error: function (error) {
+                    console.log('Error getting JSON data:', error);
+                }
+            });
+        });
     });
-});
 </script>
 </body>
 </html>
+
